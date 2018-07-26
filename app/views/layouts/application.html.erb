@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<ul>
+  <% if signed_in? %>
+  <%=image_tag @current_user.image_url%>
+  <li><%= link_to @current_user.nickname + 'さん', current_user %></li>
+  <li><%= link_to 'プロフィール', current_user %></li>
+  <li><%= link_to 'ログアウト', signout_path, method: :delete %></li>
+  <% else %>
+  <li><%= link_to 'ログイン', signin_path %></li>
+  <li><%= link_to 'アカウント作成', signup_path %></li>
+  <% end %>
+</ul>
+
+
+<hr>
 
 <%= yield %>
 

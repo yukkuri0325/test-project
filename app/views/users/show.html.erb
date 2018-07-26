@@ -1,0 +1,26 @@
+<h1>ユーザ情報</h1>
+
+<table border="1">
+  <p>プロフィール写真<br>
+  <%= image_tag @user.image_url %></p>
+  <tr>
+    <th>ニックネーム</th>
+    <td><%= @user.nickname %></td>
+  </tr>
+  <tr>
+    <th>メールアドレス</th>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <th>性別</th>
+    <td><%= @user.sex %></td>
+  </tr>
+  <tr>
+    <th>年齢</th>
+    <td><%= @user.age %></td>
+  </tr>
+</table>
+
+<% if current_user?(@user) %>
+<p><%= link_to '編集', edit_user_path %></p>
+<% end %>

@@ -1,0 +1,38 @@
+<h1>アカウント編集</h1>
+
+<%= form_for(@user) do |f| %>
+
+  <table border="1">
+    <tr>
+      <th><%= f.label :nickname, 'ニックネーム' %></th>
+      <td><%= f.text_field :nickname %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :email, 'メールアドレス' %></th>
+      <td><%= f.text_field :email %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :age, '年齢' %></th>
+      <td><%= f.text_field :age %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :sex, '性別' %></th>
+      <td><%= f.select(:sex, [['男', 1], ['女', 2]]) %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :password, 'パスワード' %></th>
+      <td><%= f.password_field :password %></td>
+    </tr>
+    <tr>
+      <th><%= f.label :password_confirmation, '確認' %></th>
+      <td><%= f.password_field :password_confirmation %></td>
+    </tr>
+    <tr>
+      <th><%=f.label :image,"ユーザー画像" %></th>
+      <td><%= f.file_field :image %></td>
+    </tr>
+  </table>
+
+  <%= f.submit 'アカウントを編集する' %>
+
+<% end %>
