@@ -9,8 +9,10 @@
 <body>
 <ul>
   <% if signed_in? %>
-  <%=image_tag @current_user.image_url%>
-  <li><%= link_to @current_user.nickname + 'さん', current_user %></li>
+  <div class="headerusericon">
+    <%=image_tag @current_user.image_url%>
+    <%= link_to @current_user.nickname + 'さん▼', current_user, class: "headerusername " %>
+  </div>
   <li><%= link_to 'プロフィール', current_user %></li>
   <li><%= link_to 'ログアウト', signout_path, method: :delete %></li>
   <% else %>

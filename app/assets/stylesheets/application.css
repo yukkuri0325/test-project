@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+ 
+.headerusericon img {
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+  vertical-align:middle;
+  text-decoration: none;
+}
+
+.headerusername {
+  text-decoration: none;
+}
+
+
