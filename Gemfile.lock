@@ -61,6 +61,8 @@ GEM
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     debug_inspector (0.0.3)
+    enum_help (0.0.17)
+      activesupport (>= 3.0.0)
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.25)
@@ -172,6 +174,7 @@ DEPENDENCIES
   byebug
   carrierwave
   coffee-rails (~> 4.1.0)
+  enum_help
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.5)

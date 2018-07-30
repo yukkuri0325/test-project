@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   before_save { email.downcase! }
+  
+  enum sex: { man: "1", woman: "2" }
 
   has_secure_password
   mount_uploader :image, ImageUploader

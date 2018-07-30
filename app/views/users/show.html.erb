@@ -1,6 +1,6 @@
-<h1>ユーザ情報</h1>
+<h2>ユーザー情報</h2>
 
-<table border="1">
+<table>
   <p>プロフィール写真<br>
   <%= image_tag @user.image_url %></p>
   <tr>
@@ -13,7 +13,7 @@
   </tr>
   <tr>
     <th>性別</th>
-    <td><%= @user.sex %></td>
+    <td><%= @user.sex_i18n %></td>
   </tr>
   <tr>
     <th>年齢</th>
@@ -22,5 +22,5 @@
 </table>
 
 <% if current_user?(@user) %>
-<p><%= link_to '編集', edit_user_path %></p>
+<p><%= link_to '編集', edit_user_path, class: 'btn btn-primary' %></p>
 <% end %>
